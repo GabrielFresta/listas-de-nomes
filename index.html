@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Nomes</title>
+    <link rel="stylesheet" href="lista.css" />
+  </head>
+  <body>
+    <h1>Lista de Nomes</h1>
+    <hr />
+
+    <div class="main-content">
+      <div class="container">
+        <h2>Adicionar Nome</h2>
+        <label for="nomeAdicionar"
+          >Digite um nome que deseja adicionar na lista</label
+        >
+        <input type="text" id="nomeAdicionar" placeholder="Ex: Maria" />
+        <button class="btn-formulario" id="btnAdicionar" onclick="adicionar()">
+          Adicionar
+        </button>
+      </div>
+
+      <div class="container">
+        <h2>Consultar Nome</h2>
+        <label for="consultarNome"
+          >Digite um nome que deseja consultar na lista</label
+        >
+        <input type="text" id="consultarNome" placeholder="Ex: Maria" />
+
+        <button class="btn-formulario" id="btnConsultar" onclick="consultar()">
+          Consultar
+        </button>
+      </div>
+
+      <div class="container">
+        <h2>Remover Nome</h2>
+        <label for="removerNome"
+          >Digite o nome que deseja remover da lista</label
+        >
+        <input type="text" id="removerNome" placeholder="Ex: Maria" />
+        <button class="btn-formulario" id="btnRemover" onclick="remover()">
+          Remover
+        </button>
+      </div>
+    </div>
+
+    <ul id="lista"></ul>
+
+    <button
+      id="limparLista"
+      onclick="limparLista()"
+      title="Limpar toda a lista"
+    >
+      🗑️
+    </button>
+
+    <script src="lista.js"></script>
+  </body>
+</html>
