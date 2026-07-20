@@ -2,7 +2,7 @@
 
 Uma aplicação web simples e funcional para gerenciamento de nomes, desenvolvida para praticar manipulação do DOM e armazenamento local de dados no front-end.
 
-🚀 **[Clique aqui para ver o projeto rodando na prática](https://gabrielfresta.github.io/lista-de-nomes/)**
+🚀 **[Clique aqui para ver o projeto rodando na prática](https://gabrielfresta.github.io/listas-de-nomes/)**
 
 ---
 
