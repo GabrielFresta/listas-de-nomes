@@ -1,5 +1,5 @@
 //Inicializa a lista pegando os dados do localStorage
-let listaNome = JSON.parse(localStorage.getItem("listaNomeSalva")) || [];
+let listaNome = JSON.parse(localStorage.getItem("listaNomesSalva")) || [];
 
 //Executar assim que a página carrega para mostrar os nomes salvos
 document.addEventListener("DOMContentLoaded", mostrarLista);
