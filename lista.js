@@ -1,5 +1,5 @@
 //Inicializa a lista pegando os dados do localStorage
-let listaNome = JSON.parse(localStorage.getItem("ListaNomeSalva")) || [];
+let listaNome = JSON.parse(localStorage.getItem("listaNomeSalva")) || [];
 
 //Executar assim que a página carrega para mostrar os nomes salvos
 document.addEventListener("DOMContentLoaded", mostrarLista);
@@ -48,7 +48,8 @@ function adicionar() {
 
 //Consultar
 function consultar() {
-  const nome = document.getElementById("consultarNome").value.trim();
+  const input = document.getElementById("consultarNome");
+  const nome = input.value.trim();
 
   if (nome === "") {
     alert("Digite um nome para consultar.");
@@ -69,6 +70,7 @@ function consultar() {
   } else {
     alert(`O nome "${nome}" não consta na lista.`);
   }
+  input.value = "";
 }
 
 //Atualizar lista visualmente
@@ -143,7 +145,7 @@ function limparLista() {
   );
   if (confirmar) {
     listaNome = [];
-    mostrarLista();
+    atualizarDados();
     alert("Todos os nomes foram removidos!");
   }
 }
