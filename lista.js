@@ -16,10 +16,11 @@ function atualizarDados() {
 
 //Adicionar
 function adicionar() {
-  const nome = document.getElementById("nomeAdicionar").value.trim();
+  const input = document.getElementById("nomeAdicionar");
+  const nome = input.value.trim();
 
+  // validação de campo vazio
   if (nome === "") {
-    listaNome.push(nome);
     alert("ERRO: adicione um nome!");
     return;
   }
@@ -27,11 +28,22 @@ function adicionar() {
     alert("ERRO: o nome deve conter apenas letras e espaços");
     return;
   }
+
+  const jaExiste = listaNome.some(
+    (n) => n.toLowerCase() === nome.toLowerCase(),
+  );
+
+  if (jaExiste) {
+    alert(`ERRO: O nome "${nome}" já está na lista!`);
+    input.value = "";
+    return;
+  }
+
   listaNome.push(nome);
   alert(`${nome} Foi adicionado com sucesso!`);
-  document.getElementById("nomeAdicionar").value = "";
 
-  mostrarLista();
+  input.value = "";
+  atualizarDados();
 }
 
 //Consultar
